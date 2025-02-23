@@ -28,5 +28,7 @@ public class FireController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("enemy"))
             Die();
+        if (collision.gameObject.CompareTag("ground"))
+            Die();
     }
 }

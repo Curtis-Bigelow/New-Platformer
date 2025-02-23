@@ -139,7 +139,20 @@ public class PlayerController : MonoBehaviour
         {
             GameManager.instance.DecreaseLives();
             GameManager.instance.pickups = 0;
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+        if (collision.gameObject.CompareTag("exit"))
+        {
+            if (SceneManager.GetActiveScene().name == "Level01" && GameManager.instance.pickups == 1)
+            {
+                GameManager.instance.pickups = 0;
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            }
+            if (SceneManager.GetActiveScene().name == "Level02" && GameManager.instance.pickups == 2)
+            {
+                GameManager.instance.pickups = 0;
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            }
         }
     }
 

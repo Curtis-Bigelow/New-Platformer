@@ -9,11 +9,12 @@ TagManager:
   - player
   - fire
   - enemy
+  - exit
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - ground
   - Water
   - UI
   - 

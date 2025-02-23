@@ -43,4 +43,5 @@ public class DragonController : MonoBehaviour
         if (collision.gameObject.CompareTag("fire"))
             Destroy(gameObject);
     }
+
 }
