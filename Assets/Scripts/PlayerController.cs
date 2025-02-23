@@ -138,6 +138,7 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.CompareTag("boundary"))
         {
             GameManager.instance.DecreaseLives();
+            GameManager.instance.pickups = 0;
             SceneManager.LoadScene(0);
         }
     }

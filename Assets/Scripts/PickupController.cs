@@ -27,4 +27,14 @@ public class PickupController : MonoBehaviour
             yield return new WaitForSeconds(0.2f);
         }
     }
+
+    //Collion for pickup
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("player"))
+        {
+            GameManager.instance.IncreasePickups();
+            Destroy(gameObject);
+        }
+    }
 }
